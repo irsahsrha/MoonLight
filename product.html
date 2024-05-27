@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+    </head>
+<body>
+  <nav>
+    <ul>
+        <li>MoonLight</li>
+        <li class="hide" onclick="homeClick()"><a href="../html/index.html">HOME</a></li>
+        <li class="hide" ><a href="" id="card"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        <li onclick=menuFunction() class="curser menu"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+      </ul>
+</nav>
+<div id="useraddcard">
+  <h1>My AddCard List</h1>
+  <div id="addlist">
+    <p id="pp"></p>
+  </div>
+  <div id="btn">
+    <button id="aa">Order</button>
+    <button id="cal">Cancel</button>
+  </div>
+  <p id="or">Ordered Successfully!!</p>
+</div>
+<h1 id="pro-head">Products</h1>
+<div class="product">
+ <div id="img1">
+ 
+   <img src="../images/img1.jpg" alt="">
+   <p>Bouquet of Red Roses</p>
+   <p>Rs :599.00</p>
+   <button id="key1">AddCard</button>
+ </div>
+ <div id="img1">
+ 
+  <img src="../images/img2.jpg" alt="">
+  <p>Bouquet of Combo Flowers</p>
+  <p>Rs : 359.00</p>
+  <button id="key2">AddCard</button>
+</div>
+<div id="img1">
+ 
+  <img src="../images/img4.jpg" alt="">
+  <p>Bouquet of Heart Roses</p>
+  <p>Rs :359.00</p>
+  <button id="key3">AddCard</button>
+</div>
+<div id="img1">
+ 
+  <img src="../images/img3.jpg" alt="">
+  <p>Bouquet of Pink Roses</p>
+  <p>Rs :359.00</p>
+  <button id="key4">AddCard</button>
+</div>
+</div>
+<div class="product1">
+  <div id="img1">
+    
+    <img src="../images/img5.png" alt="">
+    <p>Bright White Roses</p>
+    <p>Rs :400.00</p>
+    <button id="key5">AddCard</button>
+  </div>
+  <div id="img1">
+  
+   <img src="../images/img6.png" alt="">
+   <p>Bouquet of Heart Roses</p>
+   <p>Rs :399.00</p>
+   <button id="key6">AddCard</button>
+ </div>
+ <div id="img1">
+  
+   <img src="../images/img7.jpg" alt="">
+   <p>Bouquet of Heart Roses</p>
+   <p>Rs :359.00</p>
+   <button id="key7">AddCard</button>
+ </div>
+ <div id="img1">
+  
+   <img src="../images/img8.jpg" alt="">
+   <p>White Lily Flowers</p>
+   <p>Rs :359.00</p>
+   <button id="key8">AddCard</button>
+ </div>
+</div>
+ <div class="product2">
+  <div id="img1">
+    
+    <img src="../images/img9.jpg" alt="">
+    <p>White & Pink Roses</p>
+    <p>Rs :599.00</p>
+    <button id="key9">AddCard</button>
+  </div>
+  <div id="img1">
+  
+   <img src="../images/img10.jpg" alt="">
+   <p>Bouquet of Golden Flowers</p>
+   <p>Rs : 499.00</p>
+   <button id="key10">AddCard</button>
+ </div>
+ <div id="img1">
+  
+   <img src="../images/img11.jpg" alt="">
+   <p>White Lily Flowers</p>
+   <p>Rs :699.02</p>
+   <button id="key11">AddCard</button>
+ </div>
+ <div id="img1">
+  
+   <img src="../images/img12.jpg" alt="">
+   <p>Bouquet of Yellow Roses</p>
+   <p>Rs :599.00</p>
+   <button id="key12">AddCard</button>
+
+ </div>
+ </div>
+  
+</div>
+</div>
+<div id="heartgo" style="display: none;">
+    <button onclick="buy()">Buy</button>
+    <button id="cancel">Cancel</button>
+</div>
+<script>
+var eheart = document.getElementById("emptyheart")
+var fheart = document.getElementById("fullheart")
+function empty()
+{
+    eheart.style.display="none"
+    fheart.style.display="block"
+}
+function full()
+{
+  eheart.style.display="block"
+  fheart.style.display="none"
+}
+
+var go = document.getElementById("heartgo")
+function heartcall()
+{
+   go.style.display="block"
+}
+ 
+
+
+
+//add card list div
+var idcard = document.getElementById("card") 
+var div = document.getElementById("useraddcard")
+idcard.addEventListener("click",function(event)
+{
+div.style.display="block"
+event.preventDefault()
+})
+var cancel = document.getElementById("cal")
+
+cancel.addEventListener("click",function(){
+ div.style.display="none"
+})
+
+
+var k1 = document.getElementById("key1")
+var k2 = document.getElementById("key2")
+var k3 = document.getElementById("key3")
+var k4 = document.getElementById("key4")
+var k5 = document.getElementById("key5")
+var k6 = document.getElementById("key6")
+var k7 = document.getElementById("key7")
+var k8 = document.getElementById("key8")
+var k9 = document.getElementById("key9")
+var k10 = document.getElementById("key10")
+var k11= document.getElementById("key11")
+var k12= document.getElementById("key12")
+
+var  li  = document.getElementById("addlist")
+k1.addEventListener("click",function(){
+    var c = document.createElement("p")
+    c.setAttribute("id","pp")
+    c.innerHTML = "  Bouquet of Red Roses-------- Rs :599.00"
+    li.append(c)
+  })
+
+  k2.addEventListener("click",function(){
+    var c = document.createElement("p")
+    c.setAttribute("id","pp")
+    c.innerHTML = " Bouquet of Combo Flowers--------Rs : 359.00"
+    li.append(c)
+  })
+  k3.addEventListener("click",function(){
+    var c = document.createElement("p")
+    c.setAttribute("id","pp")
+    c.innerHTML = " Bouquet of Heart Roses--------Rs : 359.00"
+    li.append(c)
+  })
+  k4.addEventListener("click",function(){
+    var c = document.createElement("p")
+    c.setAttribute("id","pp")
+    c.innerHTML = "Bouquet of Pink Roses--------Rs : 359.00"
+    li.append(c)
+  })
+  k5.addEventListener("click",function(){
+    var c = document.createElement("p")
+    c.setAttribute("id","pp")
+    c.innerHTML = "Bright White Roses--------Rs :400.00"
+    li.append(c)
+  })
+  k6.addEventListener("click",function(){
+    var c = document.createElement("p")
+    c.setAttribute("id","pp")
+    c.innerHTML = "Bouquet of Heart Roses--------Rs :399.00"
+    li.append(c)
+  })
+  k7.addEventListener("click",function(){
+    var c = document.createElement("p")
+    c.setAttribute("id","pp")
+    c.innerHTML = "Bouquet of Red lily--------Rs :359.00"
+    li.append(c)
+  })
+  k8.addEventListener("click",function(){
+    var c = document.createElement("p")
+    c.setAttribute("id","pp")
+    c.innerHTML = "White Lily Flowers--------Rs : 359.00"
+    li.append(c)
+  })
+  k9.addEventListener("click",function(){
+    var c = document.createElement("p")
+    c.setAttribute("id","pp")
+    c.innerHTML = "White & Pink Roses--------Rs :599.00"
+    li.append(c)
+  })
+  k10.addEventListener("click",function(){
+    
+    var c = document.createElement("p")
+    c.setAttribute("id","pp")
+    c.innerHTML = "Bouquet of Golden Flowers--------Rs : 499.00"
+    li.append(c)
+  })
+  k11.addEventListener("click",function(){
+    var c = document.createElement("p")
+    c.setAttribute("id","pp")
+    c.innerHTML = "White Lily Flowers--------Rs :699.02"
+    li.append(c)
+  })
+  k12.addEventListener("click",function(){
+    var c = document.createElement("p")
+    c.setAttribute("id","pp")
+    c.innerHTML = " Bouquet of Yellow Roses--------Rs :599.00"
+    li.append(c)
+  })
+   var a = document.getElementById("aa")
+   var ord = document.getElementById("or")
+   a.addEventListener("click",function(){
+       ord.style.display="block"
+   })
+
+ </script>
+</body>
+</html>
+</body>
+</html>
